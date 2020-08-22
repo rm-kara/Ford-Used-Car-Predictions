@@ -1,4 +1,9 @@
 # Ford-Used-Car-Predictions
-XGBoost Regression Model for used Ford cars
+XGBoost Regression Model to predict Ford used car prices
 
-Data from: https://www.kaggle.com/orgesleka/used-cars-database
+## Table of contents
+* [General Info] (#general-info)
+
+
+## General Info
+*[Data set used] (https://www.kaggle.com/orgesleka/used-cars-database)
