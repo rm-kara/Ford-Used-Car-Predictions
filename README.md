@@ -18,7 +18,7 @@
 ## Project Overview
 In this project I worked with a data set that contains roughly **370000 used cars from Ebay-Kleinanzeigen**. I decided to focus on the **Ford** brand, the reduced data set contains roughly **25500 Ford used cars**.  
 The data was cleaned using **Pandas** and **Numpy**, visualizations were developed with **Seaborn** and **Matplotlib**.  
-Transformational steps such as encoding categorical- and numerical variables were implemented by using Scikit-learn's **Pipeline, OneHotEncoder, SimpleImputer and ColumnsTransformer** module.  
+Transformational steps such as encoding categorical- and numerical variables were implemented by using Scikit-learn's **Pipeline, OneHotEncoder, SimpleImputer and ColumnsTransformer** modules.  
 Finally, an **XGBRegressor** model was applied to predict used car prices of Ford cars.
 
 ## Getting Started
