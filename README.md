@@ -52,10 +52,10 @@ To install the packages with pip, download [requirements.txt](https://github.com
 **Vehicle Prices Of Mileage Groups:**
 ![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Price-over-km.png "Price over km")
 ***
-**Vehicle types Price Ranges:**
+**Vehicle Type Price Ranges:**
 ![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Vehicle-types.png "Types and price range")
 ***
-**Vehicle Models:**
+**Vehicle Model Prices Ranges:**
 ![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Vehicle-Model-price.png "Model price range")
 
 ## Tested Models
