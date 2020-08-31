@@ -24,14 +24,14 @@ Finally, an **XGBRegressor** model was applied to predict used car prices of For
 ## Getting Started
 
 ### Prerequisites
-**Python Version:** 3.7  
+**Python Version:** 3.8  
 **Packages:**
-* pandas 1.1.0 
+* pandas 1.0.5 
 * numpy 1.19.1
-* scikit-learn 0.23.2
-* matplotlib 3.3.1
+* scikit-learn 0.22.1
+* matplotlib 3.2.1
 * seaborn 0.10.1
-* xgboost
+* xgboost 1.0.2
 
 ### Installing Requirements
 To create a new anaconda environment, download [conda_requirements.txt](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/requirements/conda_requirements.txt) and enter the following command:  
