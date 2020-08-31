@@ -16,10 +16,10 @@
 * [Resources](#resources)
 
 ## Project Overview
-In this project I analyzed a data set that deals with the **treatment costs of various patients**.  
+In this project I worked with a data set that contains roughly **370000 used cars from Ebay-Kleinanzeigen**. I decided to focus on the **Ford** brand, the reduced data set contains roughly **25500 Ford used cars**.  
 The data was cleaned using **Pandas** and **Numpy**, visualizations were developed with **Seaborn** and **Matplotlib**.  
-Transformational steps such as encoding categorical- and numerical variables were implemented by using Scikit-learn's **Pipeline** module.  
-Different models were then compared and their performance evaluated using **cross-validation**. Finally, the best model was selected and optimized using **GridSearchCV**.
+Transformational steps such as encoding categorical- and numerical variables were implemented by using Scikit-learn's **Pipeline, OneHotEncoder, SimpleImputer and ColumnsTransformer** module.  
+Finally, an **XGBRegressor** model was applied to predict used car prices of Ford cars.
 
 ## Getting Started
 
@@ -31,57 +31,45 @@ Different models were then compared and their performance evaluated using **cros
 * scikit-learn 0.23.2
 * matplotlib 3.3.1
 * seaborn 0.10.1
+* xgboost
 
 ### Installing Requirements
-To create a new anaconda environment, download [conda_requirements.txt](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/conda_requirements.txt) and enter the following command:  
+To create a new anaconda environment, download [conda_requirements.txt](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/requirements/conda_requirements.txt) and enter the following command:  
 ```
 <conda create --name <env> --file conda_requirements.txt>
 ```
-To install the packages with pip, download [requirements.txt](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/requirements.txt) and enter the following command:  
+To install the packages with pip, download [requirements.txt](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/requirements/requirements.txt) and enter the following command:  
 ```
 <pip install -r requirements.txt>
 ```
 ## EDA Highlights
-**Average charges of the different age groups:** 
-![alt text](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/img/charts/Charges-Age-Groups.png "Charges Age Groups")
+**Year of Registration and Price:** 
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Distribution-year-price.png "Yeara and Price")
 ***
-**Charges for Smoker and Non smokers:**
-![alt text](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/img/charts/Smoker-vs-NonSmoker.png "Smokers vs. Non Smokers")
+**Vehicle Mileage:**
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Distribution-km.png "km Distribution")
 ***
-**Distribution BMI Categories and their corresponding charges:**
-![alt text](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/img/charts/BMI-Distribution%26Charges.png "BMI Categories & Charges")
-
+**Vehicle Prices Of Mileage Groups:**
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Price-over-km.png "Price over km")
+***
+**Vehicle types Price Ranges:**
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Vehicle-types.png "Types and price range")
+***
+**Vehicle Models:**
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Vehicle-Model-price.png "Model price range")
 
 ## Tested Models
 * XGBRegressor
 
 ## Model Performance
-**Overview of the R2-scores of the different models:**
-![alt text](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/img/charts/Model%20Scores.png "R2 scores")
-***
-**Results of the final model with tuned Hyperparameters:**
-* Best Model's average MAE: 2486.436
-* Best Model's average R2: 0.859  
-![alt text](https://github.com/rm-kara/Medical-Insurance-Costs/blob/master/img/charts/Model-Predictions.png "Model Predictions")
+**Results XGBRegressor:**
+* Mean Absolute Error: 680.63€
+* Mean Squared Error: 1296394.66€
+* Root Mean Squared Error: 1138.59€
+* R2 Score: 94%  
+
+![alt text](https://github.com/rm-kara/Ford-Used-Car-Predictions/blob/master/img/charts/Model-predictions.png "Model Predictions")
 
 ## Resources
 * Link to Data: 
     - [Kaggle Dataset](https://www.kaggle.com/orgesleka/used-cars-database)
-
-
-
-
-
-## General Info
-The whole data set contains about 370.000 used cars from Ebay-Kleinanzeigen including all kind of brands
-The content of the data is in German, but it should also be understandable for non-German speakers
-
-## Idea
-* Only keep rows that include Ford cars
-* Created a XGBoost Regression Model to predict Ford used car prices based on the reduced data set
-
-## Results
-* Mean Absolute Error: 680.63€
-* Mean Squared Error: 1296394.66€
-* Root Mean Squared Error: 1138.59€
-* R2 Score: 94%
